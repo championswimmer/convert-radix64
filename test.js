@@ -4,14 +4,17 @@
 
 const r = require('./index.js');
 
-console.log('Test');
+console.log('Test to 64');
 console.log(r.to64(0));
-console.log(r.to64(63));
-console.log(r.to64(64));
-console.log(r.to64(65));
+console.log(r.to64(10));
 console.log(r.to64(100));
+console.log(r.to64(1000));
+console.log(r.to64(10000));
 
-console.log(r.from64("1"));
-console.log(r.from64("11"));
-console.log(r.from64("AB"));
-console.log(r.from64("2bA"));
+
+console.log('Test from 64');
+console.log(r.from64("0"));
+console.log(r.from64("1A"));
+console.log(r.from64("10A"));
+console.log(r.from64("100A"));
+console.log(r.from64("156A"));
