@@ -15,7 +15,7 @@ npm install convert-radix64
 The alphabet used here is - 
 
 ```
-0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz
+0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz-_
 ```
 
 #### Convert to Radix64
@@ -24,7 +24,7 @@ The alphabet used here is -
 const r = requrire('convert-radix64')
 r.to64(0); //0
 r.to64(10); //A
-r.to64(64); //_
+r.to64(63); //_
 ```
 
 #### Convert from Radix64
@@ -33,6 +33,6 @@ r.to64(64); //_
 const r = requrire('convert-radix64')
 r.from64("A"); //10
 r.from64("0"); //0
-r.from64("_"); //64
+r.from64("_"); //63
 ```
 
